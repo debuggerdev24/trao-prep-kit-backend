@@ -148,7 +148,7 @@ export function loadCases(inputPath: string): unknown[] {
     process.exit(1);
   }
 
-  let raw: string;
+  let raw = '';
   try {
     raw = fs.readFileSync(inputPath, 'utf-8');
   } catch (err: unknown) {
@@ -169,7 +169,7 @@ export function loadCases(inputPath: string): unknown[] {
     process.exit(1);
   }
 
-  return parsed;
+  return parsed as unknown[];
 }
 
 /**
