@@ -1,0 +1,32 @@
+[
+  {
+    "id": "case-01-standard",
+    "jd": "Senior Full-Stack Engineer at CloudScale Inc.\nResponsibilities:\n- Design scalable backend microservices using Node.js and TypeScript.\n- Build responsive frontend web applications with React.\nRequirements:\n- 5+ years with React, Node.js, and TypeScript (Must)\n- Distributed systems and PostgreSQL experience (Must)\n- Cross-functional communication and mentoring (Must)",
+    "company_url": "https://example.com/cloudscale",
+    "days": 5
+  },
+  {
+    "id": "case-02-partial-research",
+    "jd": "Backend Developer at StealthCo.\nBuild high-throughput APIs using Node.js, Redis, and PostgreSQL.\nRequirements:\n- Strong background in Node.js and SQL optimization (Must)\n- Unit testing and CI/CD pipelines (Nice)",
+    "company_url": "https://example.com/stealth",
+    "days": 3
+  },
+  {
+    "id": "case-03-thin-jd",
+    "jd": "React Engineer needed for immediate contract. Must know React, TypeScript, and state management.",
+    "company_url": "https://example.com/contractor",
+    "days": 1
+  },
+  {
+    "id": "case-04-invalid-url",
+    "jd": "Site Reliability Engineer.\nRequirements:\n- Kubernetes and Linux systems internals (Must)\n- Incident postmortems and on-call rotation (Must)",
+    "company_url": "not-a-valid-http-url",
+    "days": 2
+  },
+  {
+    "id": "case-05-invalid-input",
+    "jd": "",
+    "company_url": "https://example.com",
+    "days": 5
+  }
+]

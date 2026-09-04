@@ -1,0 +1,14 @@
+[
+  {
+    "id": "case-01-frontend",
+    "jd": "Senior Frontend Engineer at Stripe. Requirements: 5+ years of production experience with TypeScript and React. Strong understanding of web performance, browser rendering, accessibility standards (WCAG 2.1 AA), and robust client-side state management. Experience collaborating with product design and backend teams. Nice to have: Next.js, WebSockets, and CI/CD pipelines.",
+    "company_url": "https://stripe.com",
+    "days": 7
+  },
+  {
+    "id": "case-02-backend",
+    "jd": "Backend Systems Engineer. Requirements: Proficient in Node.js, Go, or Python. Deep understanding of distributed systems, relational databases (PostgreSQL), schema design, REST and gRPC APIs, and automated integration testing. Experience with Redis caching and message queues (Kafka or RabbitMQ). Must possess excellent problem-solving and debugging skills.",
+    "company_url": "https://non-existent-startup-eval-999.org",
+    "days": 5
+  }
+]

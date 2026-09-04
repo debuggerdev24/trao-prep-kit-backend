@@ -1,0 +1,8 @@
+[
+  {
+    "id": "sample-1",
+    "jd": "Senior Frontend Engineer at Acme Corp. Requirements: 5+ years React experience, TypeScript proficiency, experience with state management (Redux/Zustand), understanding of accessibility (WCAG), and strong communication skills. Nice to have: GraphQL, testing frameworks.",
+    "company_url": "https://example.com",
+    "days": 7
+  }
+]

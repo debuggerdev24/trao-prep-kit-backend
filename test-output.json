@@ -1,0 +1,620 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-09-04T09:28:42.526Z",
+  "kits": [
+    {
+      "id": "sample-1",
+      "status": "ok",
+      "kit": {
+        "source": {
+          "company": "Example Domain",
+          "company_url": "https://example.com",
+          "role": "Senior Frontend Engineer",
+          "location": "Remote / Flexible",
+          "jd_chars": 268,
+          "researched_at": "2026-09-04T09:28:42.516Z",
+          "pages_used": [
+            "https://example.com/"
+          ]
+        },
+        "company_brief": {
+          "summary": "This domain is for use in documentation examples without needing permission. Avoid use in operations.",
+          "what_they_do": "This domain is for use in documentation examples without needing permission. Avoid use in operations.",
+          "sources": [
+            "https://example.com/"
+          ],
+          "item_status": "generated",
+          "isEdited": false,
+          "version": 1
+        },
+        "role": {
+          "title": "Senior Frontend Engineer",
+          "seniority": "Senior",
+          "responsibilities": [
+            "Fulfill core duties of Senior Frontend Engineer as outlined in posting"
+          ],
+          "requirements": [
+            {
+              "id": "r1",
+              "text": "5+ years React experience",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "r2",
+              "text": "TypeScript proficiency",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "r3",
+              "text": "Experience with state management (Redux/Zustand)",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "r4",
+              "text": "Understanding of accessibility (WCAG)",
+              "kind": "technical",
+              "priority": "must"
+            },
+            {
+              "id": "r5",
+              "text": "Strong communication skills",
+              "kind": "behavioural",
+              "priority": "must"
+            },
+            {
+              "id": "r6",
+              "text": "GraphQL",
+              "kind": "technical",
+              "priority": "nice"
+            },
+            {
+              "id": "r7",
+              "text": "Testing frameworks",
+              "kind": "technical",
+              "priority": "nice"
+            }
+          ]
+        },
+        "questions": [
+          {
+            "id": "q1",
+            "requirement_ids": [
+              "r1"
+            ],
+            "category": "technical",
+            "prompt": "What are the main React lifecycle methods in class components and the equivalent hooks in functional components?",
+            "answer_outline": [
+              "componentDidMount, componentDidUpdate, componentWillUnmount",
+              "useEffect for side‑effects, useLayoutEffect for layout effects",
+              "useState for state, useRef for instance variables"
+            ],
+            "difficulty": 1,
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "q2",
+            "requirement_ids": [
+              "r1"
+            ],
+            "category": "technical",
+            "prompt": "You need to render a list of 10,000 items with smooth scrolling. Which performance‑optimisation techniques would you apply in React and why?",
+            "answer_outline": [
+              "Virtualisation (e.g., react-window or react-virtualized) to render only visible rows",
+              "Memoisation of row components with React.memo",
+              "Avoid inline functions/objects to prevent re‑renders",
+              "Use key correctly and lazy‑load heavy assets"
+            ],
+            "difficulty": 3,
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "q3",
+            "requirement_ids": [
+              "r2"
+            ],
+            "category": "technical",
+            "prompt": "List three benefits of adopting TypeScript in a large React codebase.",
+            "answer_outline": [
+              "Static type checking catches errors early",
+              "Improved IDE autocompletion and refactoring",
+              "Self‑documenting code via explicit interfaces/types"
+            ],
+            "difficulty": 1,
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "q4",
+            "requirement_ids": [
+              "r2"
+            ],
+            "category": "technical",
+            "prompt": "Given a generic React component that receives a prop of type `T extends { id: string }`, how would you ensure proper type inference for both props and internal state?",
+            "answer_outline": [
+              "Define component as `function MyComponent<T extends { id: string }>(props: { data: T })`",
+              "Use `useState<T | null>` for state to keep same generic",
+              "Leverage `React.FC` with generic parameter for inference",
+              "Provide example usage showing inferred type without explicit annotation"
+            ],
+            "difficulty": 3,
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "q5",
+            "requirement_ids": [
+              "r3"
+            ],
+            "category": "technical",
+            "prompt": "Explain the core concepts of Redux and contrast them with Zustand's approach to state management.",
+            "answer_outline": [
+              "Redux: single immutable store, actions, reducers, middleware",
+              "Predictable state changes via pure functions",
+              "Zustand: hook‑based store, mutable state, no reducers, optional middleware",
+              "Zustand is lighter weight and more ergonomic for simple cases"
+            ],
+            "difficulty": 1,
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "q6",
+            "requirement_ids": [
+              "r3"
+            ],
+            "category": "technical",
+            "prompt": "Design a state‑management solution for a multi‑tab dashboard where tabs share some data but also keep independent local state. Would you choose Redux or Zustand, and why?",
+            "answer_outline": [
+              "Identify shared slice (e.g., user settings) stored in global store",
+              "Keep per‑tab UI state locally via Zustand or component state",
+              "Choose Redux for complex shared logic, middleware, time‑travel debugging",
+              "Prefer Zustand for lighter shared slice plus per‑tab hooks, reducing boilerplate"
+            ],
+            "difficulty": 3,
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "q7",
+            "requirement_ids": [
+              "r4"
+            ],
+            "category": "technical",
+            "prompt": "What are the four WCAG principles that should guide the development of a UI component?",
+            "answer_outline": [
+              "Perceivable: text alternatives, contrast",
+              "Operable: keyboard navigation, focus order",
+              "Understandable: clear labels, error messages",
+              "Robust: works with assistive technologies, valid HTML"
+            ],
+            "difficulty": 1,
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "q8",
+            "requirement_ids": [
+              "r4"
+            ],
+            "category": "technical",
+            "prompt": "A custom modal fails keyboard navigation for screen‑reader users. Outline the steps you would take to audit and fix its accessibility according to WCAG.",
+            "answer_outline": [
+              "Run automated audit (axe, Lighthouse) to locate focus‑trap issues",
+              "Ensure modal has `role=\"dialog\"` and `aria‑modal=\"true\"`",
+              "Set initial focus to the first focusable element and return focus on close",
+              "Provide accessible name via `aria-labelledby` or `aria-label`",
+              "Test with keyboard only and screen‑reader (NVDA/VoiceOver)"
+            ],
+            "difficulty": 3,
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "q9",
+            "requirement_ids": [
+              "r6"
+            ],
+            "category": "technical",
+            "prompt": "What are GraphQL fragments and how do they help reduce duplication in queries?",
+            "answer_outline": [
+              "Reusable selection sets defined with `fragment` keyword",
+              "Can be spread into multiple queries/mutations",
+              "Ensure consistent fields across components",
+              "Simplify maintenance when fields change"
+            ],
+            "difficulty": 1,
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "q10",
+            "requirement_ids": [
+              "r6"
+            ],
+            "category": "technical",
+            "prompt": "Describe how you would implement cursor‑based pagination for an infinite‑scroll list using GraphQL, including client‑side cache updates.",
+            "answer_outline": [
+              "Server: define `edges` and `pageInfo { endCursor, hasNextPage }`",
+              "Client: use `fetchMore` with `after` variable set to `endCursor`",
+              "Update Apollo cache by concatenating new edges to existing list",
+              "Handle loading state and edge cases when `hasNextPage` is false"
+            ],
+            "difficulty": 3,
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "q11",
+            "requirement_ids": [
+              "r7"
+            ],
+            "category": "technical",
+            "prompt": "Name two testing frameworks commonly used for React applications and a primary scenario for each.",
+            "answer_outline": [
+              "Jest – unit tests and snapshot testing",
+              "React Testing Library – component rendering and user‑interaction tests",
+              "Cypress – end‑to‑end browser testing"
+            ],
+            "difficulty": 1,
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "q12",
+            "requirement_ids": [
+              "r7"
+            ],
+            "category": "technical",
+            "prompt": "Outline a testing strategy that covers unit, integration, and end‑to‑end tests for a feature involving GraphQL data fetching, Redux/Zustand state, and UI updates.",
+            "answer_outline": [
+              "Unit: mock GraphQL resolvers, test pure reducers or Zustand slices with Jest",
+              "Integration: use React Testing Library with mocked Apollo client to verify component renders based on fetched data and state changes",
+              "E2E: Cypress to simulate real GraphQL server, navigate UI, assert data appears and state persists across pages"
+            ],
+            "difficulty": 3,
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "q13",
+            "requirement_ids": [
+              "r5"
+            ],
+            "category": "behavioural",
+            "prompt": "Can you give an example of a time when you had to explain a complex technical concept to a non‑technical stakeholder? How did you ensure they understood?",
+            "answer_outline": [
+              "Describe the concept and audience",
+              "Explain communication techniques used (e.g., analogies, visual aids)",
+              "Mention checking for understanding (questions, feedback)",
+              "Result or impact of the explanation"
+            ],
+            "difficulty": 1,
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "q14",
+            "requirement_ids": [
+              "r5"
+            ],
+            "category": "behavioural",
+            "prompt": "Describe a situation where a miscommunication caused a project delay. What steps did you take to resolve the issue, and how did you prevent similar problems in the future?",
+            "answer_outline": [
+              "Outline the miscommunication and its effect",
+              "Detail immediate actions to clarify and realign stakeholders",
+              "Explain longer‑term process changes or communication safeguards introduced",
+              "Resulting improvement in team coordination"
+            ],
+            "difficulty": 3,
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          }
+        ],
+        "flashcards": [
+          {
+            "id": "f1",
+            "front": "Explain how useEffect's dependency array influences component re‑rendering and potential pitfalls.",
+            "back": "- Runs after render; dependencies determine when effect re‑executes.\n- Empty array: runs once (componentDidMount).\n- Omitted: runs after every render.\n- Include all external values to avoid stale closures.\n- Beware of infinite loops when updating state inside effect.",
+            "requirement_ids": [
+              "r1"
+            ],
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "f2",
+            "front": "What techniques can you use to improve performance in a large React list?",
+            "back": "- Use React.memo or shouldComponentUpdate.\n- Implement windowing (e.g., react-window, react-virtualized).\n- Key props must be stable and unique.\n- Avoid inline functions/objects as props.\n- Lazy‑load heavy child components.",
+            "requirement_ids": [
+              "r1"
+            ],
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "f3",
+            "front": "How do utility types Partial<T> and Pick<T, K> help in TypeScript component props?",
+            "back": "- Partial<T>: makes all properties optional, useful for default props or updates.\n- Pick<T, K>: selects a subset of keys K from T, creates focused prop interfaces.\n- Both improve type safety and reduce duplication.",
+            "requirement_ids": [
+              "r2"
+            ],
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "f4",
+            "front": "Write a generic function signature in TypeScript that maps an array of items to a dictionary keyed by a property.",
+            "back": "function arrayToDict<T, K extends keyof T>(arr: T[], key: K): Record<T[K] & (string | number), T> {\n  return arr.reduce((acc, item) => {\n    acc[item[key] as any] = item;\n    return acc;\n  }, {} as any);\n}",
+            "requirement_ids": [
+              "r2"
+            ],
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "f5",
+            "front": "When would you choose Redux Toolkit's createAsyncThunk over a custom middleware for async actions?",
+            "back": "- Standard pattern for handling pending/fulfilled/rejected states.\n- Reduces boilerplate; auto‑generates action types.\n- Built‑in error handling and request cancellation.\n- Prefer when you need consistent async flow across the app.",
+            "requirement_ids": [
+              "r3"
+            ],
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "f6",
+            "front": "Compare Zustand and Redux for local component state management.",
+            "back": "- Zustand: minimal boilerplate, hooks‑based API, ideal for small to medium stores.\n- Redux: predictable state container, devtools, middleware ecosystem; better for large, shared state.\n- Zustand lacks built‑in time‑travel debugging.\n- Choose based on app scale and team familiarity.",
+            "requirement_ids": [
+              "r3"
+            ],
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "f7",
+            "front": "What ARIA attribute would you use to label a custom button component and why?",
+            "back": "- Use aria-label or aria-labelledby.\n- aria-label provides an accessible name when visual text is absent.\n- Ensure role=\"button\" is set if element is not a native button.\n- Improves screen‑reader discoverability.",
+            "requirement_ids": [
+              "r4"
+            ],
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "f8",
+            "front": "Describe how to make a modal dialog keyboard accessible.",
+            "back": "- Trap focus within the dialog (first/last focusable elements loop).\n- Return focus to the trigger element on close.\n- Use role=\"dialog\" and aria-modal=\"true\".\n- Provide an accessible title via aria-labelledby.\n- Allow Escape key to close.",
+            "requirement_ids": [
+              "r4"
+            ],
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "f9",
+            "front": "How would you explain the benefits of component memoization to a non‑technical product manager?",
+            "back": "- Reduces unnecessary work, making the app faster.\n- Faster load times improve user satisfaction.\n- Saves server resources and can lower hosting costs.\n- No change in functionality; just performance optimization.",
+            "requirement_ids": [
+              "r5"
+            ],
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "f10",
+            "front": "Give a concise strategy for handling a disagreement during a code review.",
+            "back": "- Listen actively and restate the other’s point.\n- Refer to shared standards or documented guidelines.\n- Propose a small experiment or prototype.\n- If still unresolved, involve a neutral senior engineer.\n- Keep tone respectful and focus on the code, not the person.",
+            "requirement_ids": [
+              "r5"
+            ],
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "f11",
+            "front": "Differentiate between a GraphQL query and a mutation in terms of intent and caching.",
+            "back": "- Query: fetches data, should be side‑effect‑free, cacheable.\n- Mutation: modifies server state, may return updated data, usually not cached.\n- Apollo/URQL automatically updates cache for queries; mutations require update functions or refetches.",
+            "requirement_ids": [
+              "r6"
+            ],
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "f12",
+            "front": "What client‑side caching strategy would you use for frequently accessed but rarely changed data?",
+            "back": "- Use a normalized cache (e.g., Apollo InMemoryCache) with appropriate fetchPolicy: \"cache-first\".\n- Set appropriate cache TTL or manual eviction.\n- Leverage @client directives for local-only fields.\n- Optionally prefetch on app load.",
+            "requirement_ids": [
+              "r6"
+            ],
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "f13",
+            "front": "When testing a React component that fetches data via GraphQL, what should be mocked and why?",
+            "back": "- Mock the GraphQL client (e.g., Apollo MockedProvider) to return deterministic responses.\n- Avoid real network calls for speed and reliability.\n- Verify UI renders based on mocked data and loading/error states.",
+            "requirement_ids": [
+              "r7"
+            ],
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          },
+          {
+            "id": "f14",
+            "front": "Outline the difference between unit and integration tests for a component using React Testing Library.",
+            "back": "- Unit test: isolates component logic, may mock child components and hooks.\n- Integration test: renders component with its children, tests interaction and DOM updates.\n- RTL encourages integration style for realistic user behavior.\n- Use jest.spyOn for functions, but avoid shallow rendering.",
+            "requirement_ids": [
+              "r7"
+            ],
+            "item_status": "generated",
+            "isPinned": false,
+            "isEdited": false,
+            "isCustom": false,
+            "version": 1
+          }
+        ],
+        "schedule": {
+          "days_available": 7,
+          "days": [
+            {
+              "day": 1,
+              "focus": "Deep Dive: Complex Technical Architecture & Edge Cases",
+              "question_ids": [
+                "q2",
+                "q4"
+              ],
+              "minutes": 65
+            },
+            {
+              "day": 2,
+              "focus": "Deep Dive: Complex Technical Architecture & Edge Cases",
+              "question_ids": [
+                "q6",
+                "q8"
+              ],
+              "minutes": 65
+            },
+            {
+              "day": 3,
+              "focus": "Deep Dive: Complex Technical Architecture & Edge Cases",
+              "question_ids": [
+                "q14",
+                "q1"
+              ],
+              "minutes": 50
+            },
+            {
+              "day": 4,
+              "focus": "Foundational Technical Knowledge & Concepts",
+              "question_ids": [
+                "q3",
+                "q5"
+              ],
+              "minutes": 40
+            },
+            {
+              "day": 5,
+              "focus": "Foundational Technical Knowledge & Concepts",
+              "question_ids": [
+                "q7",
+                "q13"
+              ],
+              "minutes": 40
+            },
+            {
+              "day": 6,
+              "focus": "Deep Dive: Complex Technical Architecture & Edge Cases",
+              "question_ids": [
+                "q10",
+                "q12"
+              ],
+              "minutes": 65
+            },
+            {
+              "day": 7,
+              "focus": "Final Review, Synthesis & Mock Interview Readiness",
+              "question_ids": [
+                "q11",
+                "q9"
+              ],
+              "minutes": 40
+            }
+          ]
+        },
+        "coverage": {
+          "uncovered_requirement_ids": [],
+          "passes": 1
+        }
+      },
+      "error": null
+    }
+  ]
+}
