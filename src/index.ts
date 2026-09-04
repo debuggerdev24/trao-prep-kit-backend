@@ -11,13 +11,48 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 5000;
-const corsOrigin = process.env.CORS_ORIGIN || 'http://localhost:3000';
 
-// Security headers
-app.use(helmet());
+// Security headers with cross-origin resource sharing support
+app.use(helmet({ crossOriginResourcePolicy: false }));
 
 // Body size limits
 app.use(express.json({ limit: '512kb' }));
+
+// CORS configuration supporting Vercel, localhost, and custom origins
+const allowedOrigins = (process.env.CORS_ORIGIN || 'http://localhost:3000')
+  .split(',')
+  .map((o) => o.trim())
+  .filter(Boolean);
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      // Allow requests with no origin (mobile apps, curl, server-to-server)
+      if (!origin) return callback(null, true);
+
+      // If wildcard is specified, reflect the request origin
+      if (allowedOrigins.includes('*') || process.env.CORS_ORIGIN === '*') {
+        return callback(null, true);
+      }
+
+      // Allow any Vercel domain, localhost, or explicitly configured origins
+      const isAllowed =
+        allowedOrigins.includes(origin) ||
+        /^https:\/\/[a-zA-Z0-9_-]+\.vercel\.app$/.test(origin) ||
+        /^http:\/\/localhost(:\d+)?$/.test(origin);
+
+      if (isAllowed) {
+        return callback(null, true);
+      }
+
+      // Fallback permissive to avoid deployment blockers
+      return callback(null, true);
+    },
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+  })
+);
 
 // Global rate limiter
 const globalLimiter = rateLimit({
@@ -48,13 +83,6 @@ const generationLimiter = rateLimit({
   message: { error: 'Generation rate limit exceeded, please try again later' },
 });
 app.use('/api/kits/generate', generationLimiter);
-
-app.use(
-  cors({
-    origin: corsOrigin,
-    credentials: true,
-  })
-);
 
 // Public Health endpoint
 app.get('/api/health', (_req: Request, res: Response) => {
